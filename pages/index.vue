@@ -2,21 +2,20 @@
   <div>
     <h1 class="title">Search movies</h1>
     <Search />
-    <div class="btn"><button>Search</button></div>
-
+    <Movie />
   </div>
 </template>
 
 <script>
 import Search from '@/components/Search'
+import Movie from '@/components/Movie'
+
 export default {
   components: {
-    Search
+    Search, Movie
   }
 }
 </script>
-
-
 
 <style scoped>
   .title {
@@ -24,37 +23,6 @@ export default {
     padding-bottom: 30px;
     text-align: center;
     text-transform: uppercase;
-  }
-  .input {
-    width: 600px;
-    margin: 0 auto;
-  }
-  input {
-    width: 600px;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 15px;
-    font-family: 'Roboto';
-    font-weight: bold;
-    color: #000;
-    border-radius: 20px;
-    padding: 10px;
-    margin-bottom: 30px;
-  }
-  .btn {
-    width: 150px;
-    margin: 0 auto;
-  }
-  .btn button {
-    padding: 20px;
-    background: skyblue;
-    color: #fff;
-    text-transform: uppercase;
-    border: 1px solid white;
-    border-radius: 20px;
-    width: 150px;
-    outline: none;
-    cursor: pointer;
   }
 </style>
 
