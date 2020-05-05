@@ -1,16 +1,17 @@
-import { defineComponent, ref, useFetch } from 'nuxt-composition-api'
+import { defineComponent, ref, watch } from 'nuxt-composition-api'
 import axios from 'axios'
 
 const API_KEY = 'a5549d08';
 
 export default defineComponent({
   setup() {
-    const name = ref('')
+    const name = ref('hi')
 
-    useFetch(async () => {
-      name.value = await axios.get(`https://www.omdbapi.com/?s=${state.search}&apikey=${API_KEY}`)
+    watch(async () => {
+      name.value = await axios.get('http://www.omdbapi.com/?i=tt3896198&apikey=2cac6eaa')
     })
 
     return { name }
-  },
+  }
 })
+
