@@ -1,11 +1,22 @@
 <template>
   <div>
     <h1 class="title">Search movies</h1>
-    <div class="input"> <input type="text" placeholder="Input name Movie"></div>
+    <Search />
     <div class="btn"><button>Search</button></div>
 
   </div>
 </template>
+
+<script>
+import Search from '@/components/Search'
+export default {
+  components: {
+    Search
+  }
+}
+</script>
+
+
 
 <style scoped>
   .title {
