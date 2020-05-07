@@ -14,28 +14,20 @@ import MovieCards from '@/components/MovieCards.vue'
 
 export default {
   components: {
-    Search,
-    MovieCards
+    Search,  MovieCards
   },
-
   data() {
     return {
       movies: []
     }
   },
-  mounted() {},
-
   methods: {
     setMovies: function(movies) {
       console.log(movies)
       this.movies = []
       this.movies.push(...movies)
     }
-  },
-
-  watch: {},
-
-  computed: {}
+  }
 }
 </script>
 

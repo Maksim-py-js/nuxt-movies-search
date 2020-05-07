@@ -14,28 +14,19 @@ export default {
   data() {
     return {
       searchValue: null,
-      searchOmdbUrl: 'http://www.omdbapi.com/?apikey=ca5e425d&s='
+      searchUrl: 'http://www.omdbapi.com/?apikey=ca5e425d&s='
     }
   },
-
-  mounted() {},
   methods: {
     async search() {
       if (this.searchValue) {
-        let url = this.searchOmdbUrl + this.searchValue
-        const page1 = await this.$axios.$get(url)
+        let url = this.searchUrl + this.searchValue
+        const obj1 = await this.$axios.$get(url)
         url = url + '&page=2'
-        const page2 = await this.$axios.$get(url)
-        const response = page1.Search.concat(page2.Search)
+        const obj2 = await this.$axios.$get(url)
+        const answer = obj1.Search.concat(obj2.Search)
 
-        this.$emit('search-result', response)
-      } else {
-        bulmaToast.toast({
-          message: 'Type a valid keyword!',
-          type: 'is-danger',
-          position: 'bottom-center',
-          animate: { in: 'fadeIn', out: 'fadeOut' }
-        })
+        this.$emit('search-result', answer)
       }
     }
   }
