@@ -35,25 +35,28 @@ export default {
 
 <style scoped>
 .input input {
-   width: 600px;
+    display: block;
+    width: 600px;
+    margin: 0 auto 30px;
     text-align: center;
-    text-transform: uppercase;
     font-size: 15px;
     font-family: 'Roboto';
     font-weight: bold;
-    color: #000;
-    border-radius: 20px;
+    color: #404040;
+    border-radius: 4px;
+    border: none;
     padding: 10px;
-    margin-bottom: 30px;
     outline: none;
 }
 .button {
-  padding: 20px;
-  background: skyblue;
+  display: block;
+  padding: 15px 20px;
+  background: #767676;
   color: #fff;
   text-transform: uppercase;
   border: 1px solid white;
-  border-radius: 20px;
+  border-radius: 4px;
+  border: 2px solid #404040;
   width: 150px;
   outline: none;
   cursor: pointer;

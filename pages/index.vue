@@ -32,10 +32,15 @@ export default {
 </script>
 
 <style>
+body {
+  background: #595959;
+}
 .title {
     padding-top: 50px;
     padding-bottom: 30px;
     text-align: center;
     text-transform: uppercase;
+    color: #fff;
+    font-family: 'Roboto';
   }
 </style>
