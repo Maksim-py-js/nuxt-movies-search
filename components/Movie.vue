@@ -1,22 +1,33 @@
 <template>
-  <div class="movie">
-    <div class="name"></div>
-    <div class="image"></div>
-    <div class="year"></div>
-    <div class="description"></div>
-  </div>
+  <section>
+    <ul  class="movie">
+      <li>
+        <h2>{{ mov }}</h2>
+      </li>
+    </ul> 
+  </section>
 </template>
-<script>
-import { watch } from '@/plugins/movie-api'
-export default {
 
+<script>
+export default {
+  data () {
+    return {
+      movie: []
+    }
+  },
+  async fetch () {
+    const mov = await axios.get(`http://www.omdbapi.com/?t=joker&apikey=2cac6eaa`)
+    
+  }
 }
 </script>
+
+
 
 <style  scoped>
   .movie {
     width: 25%;
     height: 50px;
-    background: #000;
+    background: #f1f1f1;
   }
 </style>

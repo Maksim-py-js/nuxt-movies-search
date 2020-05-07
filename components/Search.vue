@@ -4,6 +4,7 @@
       <input
         type="text"
         placeholder="Input name Movie"
+        v-model="title"
       >
     </div>
     <div class="submit">
@@ -17,7 +18,9 @@
 
 <script>
 export default {
-
+  data: () => ({
+    title: ''
+  })
 }
 </script>
 
