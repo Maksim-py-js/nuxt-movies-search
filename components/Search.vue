@@ -25,7 +25,6 @@ export default {
         url = url + '&page=2'
         const obj2 = await this.$axios.$get(url)
         const answer = obj1.Search.concat(obj2.Search)
-
         this.$emit('search-result', answer)
       }
     }
@@ -35,31 +34,43 @@ export default {
 
 <style scoped>
 .input input {
-    display: block;
-    width: 600px;
-    margin: 0 auto 30px;
-    text-align: center;
-    font-size: 15px;
-    font-family: 'Roboto';
-    font-weight: bold;
-    color: #404040;
-    border-radius: 4px;
-    border: none;
-    padding: 10px;
-    outline: none;
+  display: block;
+  width: 70%;
+  margin: 0 auto 30px;
+	padding: 18px 48px;
+  border: none;
+  background:transparent;
+  text-align: center;
+	font-family: "Asap";
+  font-weight: bold;
+	font-size: 16px;
+	color: #4d4d4d;
+  border-radius: 15px 15px 15px 15px;
+  outline: none;
+  background: #fff;
+}
+.input input:hover {
+
+  box-shadow: 0px 10px 15px 8px #cacaca;
 }
 .button {
   display: block;
-  padding: 15px 20px;
-  background: #767676;
-  color: #fff;
-  text-transform: uppercase;
-  border: 1px solid white;
-  border-radius: 4px;
-  border: 2px solid #404040;
-  width: 150px;
-  outline: none;
+  background:transparent;
+	padding: 18px 48px;
+	border: 1px solid #4d4d4d;
+	font-family: "Asap";
+	font-weight: medium;
+	font-size: 16px;
+	color: #4d4d4d;
+  border-radius: 15px 15px 15px 15px;
   cursor: pointer;
   margin: 0 auto;
+  outline: none;
+}
+.button:hover {
+  font-weight: bold;
+  background: #fff;
+  border: 1px solid #fff;
+  box-shadow: 0px 10px 15px 8px #cacaca;
 }
 </style>

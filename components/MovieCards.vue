@@ -1,18 +1,13 @@
 <template>
-  <div class="columns is-multiline">
-    <div class="column is-one-fifth" v-for="(movie, index) in movies" :key="index">
+  <div class="columns">
+    <div class="column" v-for="(movie, index) in movies" :key="index">
       <div class="card">
-        <div class="card-image">
-          <figure class="image is-4by5">
-            <img :src="movie.Poster" alt="Poster" />
-          </figure>
+        <div class="image">
+          <img  :src="movie.Poster" alt="Poster">
         </div>
-        <div class="card-content">
-          <div class="content">
-            <p>{{ movie.Title }}</p>
-            <time datetime="2016-1-1">{{ movie.Year }}</time>
-            <div>{{ movie.Director }}</div>
-          </div>
+        <div class="content">
+          <p>{{ movie.Title }}</p>
+          <div datetime="2016-1-1">{{ movie.Year }}</div>
         </div>
       </div>
     </div>
@@ -31,6 +26,9 @@ export default {
 </script>
 
 <style scoped>
+  * {
+    text-align: center;
+  }
   .columns {
     display: flex;
     justify-content: space-between;
@@ -39,26 +37,58 @@ export default {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
+    margin-top: 50px;
   }
   .column {
-    background: #f1f1f1;
-    margin: 10px;
-    padding: 10px;
-    box-sizing: border-box;
-    width: calc(100% / 4 - 20px);
-    min-height: 330px;
+    width: 24%;
+    margin-bottom: 20px;
   }
-  p {
-    font-family: 'Roboto';
-    font-size: 20px;
-    line-height: 30px;
-    margin: 0;
+  .card {
+    border-radius: 15px 15px 15px 15px;
+    background: #262626;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    min-height: 420px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding-bottom: 10px;
+  }
+  .card:hover {
+    margin-top: -20px;
+    transition: .2s;
+    box-shadow: 0px 0px 30px 10px #a9a9a9;
+    cursor: pointer;
+    background: #fff;
+  }
+  .card:hover .content {
+    font-weight: bold;
+    color: #4d4d4d;
+  }
+  .card:hover img {
+    font-family: "Asap";
+    font-weight: bold;
+    font-size: 16px;
+    color: #4d4d4d;
   }
   img {
     width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    border-radius: 15px 15px 0 0;
+
+    font-family: "Asap";
+    font-weight: medium;
+    font-size: 16px;
+    color: #fff;
+    border: none;
   }
-  time {
-    font-family: 'Roboto';
-    font-size: 14px;
+  .content {
+    font-family: "Asap";
+    font-weight: medium;
+    font-size: 16px;
+    color: #fff;
+    padding: 5px;
   }
 </style>
