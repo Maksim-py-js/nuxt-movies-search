@@ -30,5 +30,34 @@ export default {
 </script>
 
 <style scoped>
-
+  .columns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .column {
+    background: #f1f1f1;
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: calc(100% / 4 - 20px);
+    min-height: 330px;
+  }
+  p {
+    font-family: 'Roboto';
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0;
+  }
+  img {
+    width: 100%;
+  }
+  time {
+    font-family: 'Roboto';
+    font-size: 14px;
+  }
 </style>
