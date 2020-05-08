@@ -11,6 +11,7 @@
           <div class="content">
             <p>{{ movie.Title }}</p>
             <time datetime="2016-1-1">{{ movie.Year }}</time>
+            <div>{{ movie.Director }}</div>
           </div>
         </div>
       </div>

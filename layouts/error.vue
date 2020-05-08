@@ -1,13 +1,13 @@
 <template>
     <div class="content">
         <h1>Такой фильм не найден</h1>
-        <nuxt-link to="/" class="link">Главная</nuxt-link>
+        <a href="/" class="link">Главная</a>
     </div>
 </template>
 
 <style scoped>
     .content {
-        text-align: center;   
+        text-align: center;
     }
     h1 {
         font-size: 30px;
